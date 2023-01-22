@@ -6,7 +6,7 @@ const BLOCKED_COUNTRY = 'VE';
 
 // Trigger this middleware to run on the `/secret-page` route
 export const config = {
-  matcher: '/',
+  matcher: ['/', '/test'],
 };
 
 export function middleware(req: NextRequest) {
