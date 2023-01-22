@@ -17,7 +17,7 @@ export function middleware(req: NextRequest) {
 
   // Specify the correct route based on the requests location
   if (country === BLOCKED_COUNTRY) {
-    req.nextUrl.pathname = '/login';
+    req.nextUrl.pathname = '/';
   } else {
     req.nextUrl.pathname = `/secret-page`;
   }
