@@ -19,7 +19,7 @@ export function middleware(req: NextRequest) {
   if (country === BLOCKED_COUNTRY) {
     req.nextUrl.pathname = '/';
   } else {
-    req.nextUrl.pathname = `/secret-page`;
+    req.nextUrl.pathname = `/test`;
   }
 
   // Rewrite to URL
