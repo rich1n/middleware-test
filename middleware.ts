@@ -6,7 +6,7 @@ const BLOCKED_COUNTRY = 'VE';
 
 // Trigger this middleware to run on the `/secret-page` route
 export const config = {
-  matcher: '/secret-page',
+  matcher: '/',
 };
 
 export function middleware(req: NextRequest) {
@@ -19,7 +19,7 @@ export function middleware(req: NextRequest) {
   if (country === BLOCKED_COUNTRY) {
     req.nextUrl.pathname = '/';
   } else {
-    req.nextUrl.pathname = `/test`;
+    req.nextUrl.pathname = `/secret-page`;
   }
 
   // Rewrite to URL
